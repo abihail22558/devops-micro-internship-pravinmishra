@@ -416,8 +416,6 @@ The final script combines several Bash concepts to perform an organized automati
 
 https://www.linkedin.com/posts/abihail-osahon-096564232_devops-linux-bash-ugcPost-7486951400334311424-69BG/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADoaXXIBPrMQ_TL1SPeACNDTKQQWRcfVxDU
 
-`Add your URL here`
-
 ---
 
 #### Screenshot — Published LinkedIn post
