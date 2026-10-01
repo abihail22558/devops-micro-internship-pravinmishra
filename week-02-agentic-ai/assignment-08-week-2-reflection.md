@@ -122,10 +122,7 @@ P.S. **P.S. This post is a part of DevOps Micro Internship with Agentic AI Cohor
 ---
 
 ### LinkedIn Post Link:
- https://www.linkedin.com/posts/abihail-osahon-096564232_devops-agenticai-claudecode-ugcPost-7486148866518687744-xuhu/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADoaXXIBPrMQ_TL1SPeACNDTKQQWRcfVxDU
-
-`Add your URL here`
-
+https://lnkd.in/p/drv9KJgC
 ---
 
 # Submission Instructions
