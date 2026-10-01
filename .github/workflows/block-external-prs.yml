@@ -1,4 +1,4 @@
-name: Block External Pull Requests
+name: add AI-assisted Git safety checks
 
 on:
   pull_request_target:
