@@ -168,7 +168,7 @@ https://www.linkedin.com/posts/abihail-osahon-096564232_devops-devopsinternship-
 
 #### Screenshot — LinkedIn post showing the deployed CodeTrack application
 
-![linkedin](.week-04-git-and-github/screenshots/linkedin.png)
+![linkedin](./screenshots/linkedin.png)
 
 ---
 
