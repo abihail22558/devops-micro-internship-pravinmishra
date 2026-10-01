@@ -27,7 +27,7 @@ Confirm you are working in your own fork, then create a dedicated branch for thi
 
 #### Screenshot 1 — Output of git remote -v and git branch showing the new branch
 
-Add your screenshot here.
+![task 0](./screenshots/ass6task0.png)
 
 ---
 
@@ -35,7 +35,8 @@ Add your screenshot here.
 
 **1. Why create a dedicated branch instead of doing this work on main?**
 
-Add your answer here.
+A dedicated feature branch keeps the main branch stable and protected while I work on the assignment. It allows me to develop, test, and review the changes independently before merging them, reducing the risk of introducing incomplete or unwanted changes into main.
+
 
 ---
 
@@ -49,7 +50,7 @@ On your own fork of this repository (the one you've been submitting your DMI wor
 
 #### Screenshot 1 — Output of  `git status` showing the staged file on feature/ai-pr-ready
 
-Add your screenshot here.
+![git status](./screenshots/ass6task1.png)
 
 ---
 
@@ -57,7 +58,8 @@ Add your screenshot here.
 
 **1. Why does this assignment use an obviously fake key instead of a real one?**
 
-Add your answer here.
+This assignment used an obviously fake AWS access key because the purpose of this task is to safely test the Git safety checks without exposing real credentials. Using a fake value allows the pre-commit hook to detect a secret-like pattern while preventing accidental access to an actual AWS account or resources. This demonstrates how secret detection can be tested safely in a controlled environment.
+
 
 ---
 
@@ -71,13 +73,13 @@ Create a tracked, shareable pre-commit hook that blocks a commit containing secr
 
 #### Screenshot 2 — `hooks/pre-commit` open in VS Code showing the full script
 
-Add your screenshot here.
+![hooks pre commit](./screenshots/ass6task2m1.png)
 
 ---
 
 #### Screenshot 3 — Output of `git config core.hooksPath` confirming it points to `hooks`
 
-Add your screenshot here.
+![hooks ](./screenshots/ass6task2m2.png)
 
 ---
 
@@ -85,13 +87,15 @@ Add your screenshot here.
 
 **1. Why is `hooks/pre-commit` tracked in the repo instead of living only in `.git/hooks/`?**
 
-Add your answer here.
+The hook is tracked in the repository so the Git safety rule is version-controlled and can be shared consistently with anyone working on the project. A hook stored only in `.git/hooks/` is local to one developer's machine and is not included when the repository is cloned. Keeping it in the repository makes the guardrail visible, reviewable, and reproducible across the development environment.
+
 
 ---
 
 **2. Compare this to `PreToolUse` from Week 2 Assignment 6. What does each one intercept, and what do they have in common?**
 
-Add your answer here.
+Both hooks act as preventive guardrails, but they protect different boundaries. The Git pre-commit hook runs before a Git commit is created and checks staged changes for conditions such as secret-like strings and oversized files. The PreToolUse hook from Week 2 runs before Claude Code executes a tool action and can prevent unsafe commands or operations. Both follow the same principle of detecting risky actions before they cross an important execution boundary.
+
 
 ---
 
@@ -105,7 +109,7 @@ Attempt to commit the staged file from Task 1 and show the hook rejecting it.
 
 #### Screenshot 4 — Terminal showing `git commit` rejected with the hook's "BLOCKED" message naming the exact file
 
-Add your screenshot here.
+![access blocked](./screenshots/ass6task3.png)
 
 ---
 
@@ -113,13 +117,14 @@ Add your screenshot here.
 
 **1. Which line in `hooks/pre-commit` matched your fake key, and why did it match?**
 
-Add your answer here.
+The line that triggered the hook was `AWS_ACCESS_KEY_ID=AKIAABCDEFGHIJKLMNOP`. The hook detected it because the pre-commit rule searches for the pattern `AKIA[0-9A-Z]{16}`, which matches the `AKIA` prefix followed by 16 uppercase letters or numbers. This is a common pattern used to identify AWS access-key-shaped strings.
+
 
 ---
 
 **2. Could this hook have caught a poorly-named variable that stores a secret without the `AKIA` prefix? What does that tell you about the limits of a fixed rule like this?**
 
-Add your answer here.
+No. The hook uses fixed regular-expression patterns, so it only detects strings that match the patterns it was specifically designed to identify. A secret stored under a poorly named variable or using a different credential format could pass this check. This demonstrates the limitation of deterministic rules and why additional analysis, such as the `/pr-ready` Claude Code skill, can provide another layer of review.
 
 ---
 
@@ -133,13 +138,13 @@ Create a manually invoked Claude Code skill that reads your staged changes and p
 
 #### Screenshot 5 — `SKILL.md` frontmatter showing `allowed-tools: Bash, Read, Grep` (no `Write`) and `disable-model-invocation: true`
 
-Add your screenshot here.
+![allowed tools](./screenshots/ass6task4m1.png)
 
 ---
 
 #### Screenshot 6 — `/pr-ready` output while the risky file is still staged, showing it flagged the secret and/or debug statement
 
-Add your screenshot here.
+![flagged ](./screenshots/ass6task4m2.png)
 
 ---
 
@@ -147,13 +152,15 @@ Add your screenshot here.
 
 **1. Why does `/pr-ready` have `Bash` and `Read` but not `Write`?**
 
-Add your answer here.
+Bash and Read are included because the skill needs to inspect the repository state and staged Git changes. Write is intentionally excluded because `/pr-ready` is designed to be a read-only review and drafting tool. Preventing file-writing access creates a clear safety boundary: Claude can identify problems and prepare a PR draft, but the human must make the actual changes.
+
 
 ---
 
 **2. The pre-commit hook and `/pr-ready` both looked at the same staged diff. Did they flag the same things? What did one catch that the other didn't?**
 
-Add your answer here.
+Both checks identified the credential-shaped AWS key, but `/pr-ready` provided broader analysis. The pre-commit hook uses fixed patterns and blocked the commit because the staged file contained an AWS key-shaped string. `/pr-ready` also identified the debug `echo` statement and explained why the credential-shaped value should be removed or replaced. This shows the difference between deterministic rule-based protection and broader AI-assisted review.
+
 
 ---
 
@@ -167,13 +174,15 @@ Remove the secret and debug statement, then prove both gates now pass clean.
 
 #### Screenshot 7 — `git commit` succeeding after the fix (no BLOCKED message)
 
-Add your screenshot here.
+![git commit successful](./screenshots/ass6task5m1.png)
 
 ---
 
 #### Screenshot 8 — Second `/pr-ready` run showing a clean risk report and a drafted PR title + description
 
-Add your screenshot here.
+![pr ready](./screenshots/ass6task5m2a.png)
+![pr ready](./screenshots/ass6task5m2b.png)
+![pr ready](./screenshots/ass6task5m2c.png)
 
 ---
 
@@ -181,7 +190,8 @@ Add your screenshot here.
 
 **1. What exactly did you change to satisfy the pre-commit hook?**
 
-Add your answer here.
+I removed the hardcoded secret from `scripts/notify.sh` and removed the debug `echo` statement. This satisfied the pre-commit hook because the script no longer contained a credential or debug statement that could trigger the safety checks. After making the changes, the commit completed successfully without a `BLOCKED` message.
+
 
 ---
 
@@ -197,13 +207,13 @@ Push your branch and open a real Pull Request, using `/pr-ready`'s drafted title
 
 #### Screenshot 9 — Your Pull Request showing the base repository is your own fork, plus the title and description, with the `/pr-ready` draft visible for comparison (paste it in the PR conversation or your notes below)
 
-Add your screenshot here.
+![pull request](./screenshots/ass6task6.png)
 
 ---
 
 #### PR Link
 
-Add your PR URL here...
+https://github.com/abihail22558/devops-micro-internship-pravinmishra/pull/1
 
 ---
 
@@ -211,20 +221,19 @@ Add your PR URL here...
 
 **1. What, if anything, did you edit in the AI's drafted PR description before using it? Why?**
 
-Add your answer here.
+I reviewed the AI-generated PR description and edited parts that did not accurately reflect the changes I made. I wanted the final description to clearly match the work completed in Assignment 6 instead of blindly using the generated content.
 
 ---
 
 **2. If you had blindly copy-pasted the AI's draft without reading it, what could go wrong?**
 
-Add your answer here.
+The PR description could contain incorrect, incomplete, or misleading information about the changes. It could also describe work that was not actually completed, which would make the PR less accurate and could cause confusion during review.
 
 ---
 
 **3. Why does this PR need to target your own fork instead of the shared upstream repository?**
 
-Add your answer here.
-
+The PR should target my own fork because the changes were made in my personal branch and should be reviewed and merged within my fork. Targeting the shared upstream repository could unintentionally request changes to the main project instead of keeping my assignment work within my own repository.
 ---
 
 # Task 7 — Map the Workflow to the Agentic Loop
@@ -237,31 +246,31 @@ Explain this assignment's workflow using the same Gather → Analyze → Human A
 
 **1. Which step(s) represent Gather?**
 
-Add your answer here.
+The Gather stage happens when the pre-commit hook and the /pr-ready skill inspect the repository and collect information about the current Git state, changed files, and possible issues such as secrets, debug statements, or TODO/FIXME comments.
 
 ---
 
 **2. Which step(s) represent Analyze?**
 
-Add your answer here.
+The Analyze stage happens when /pr-ready reviews the gathered information and checks the changes against the defined safety rules. It then identifies potential risks and prepares a PR title and description based on what it found.
 
 ---
 
 **3. Which step is Human Act, and why must a human — not Claude — run `git commit`, `git push`, and open the PR?**
 
-Add your answer here.
+The Human Act stage is when I review the AI's findings and then manually run commands such as git commit and git push and open the Pull Request. A human must perform these actions because the AI should not have control over publishing changes or creating commits without human review and approval. This keeps the human responsible for the final decision and prevents an AI mistake from being automatically pushed to the repository.
 
 ---
 
 **4. Which step is Verify?**
 
-Add your answer here.
+The Verify stage happens when the pre-commit hook checks the changes before the commit is accepted and when /pr-ready is run again to confirm that the issues have been fixed and the repository is ready for a Pull Request.
 
 ---
 
 **5. In one or two sentences: why do you need *both* the fixed-rule pre-commit hook and the AI skill? Isn't one enough?**
 
-Add your answer here.
+The fixed-rule pre-commit hook provides a consistent safety check that automatically blocks specific problems before they are committed. The AI skill provides a broader review and helps explain the changes, identify potential risks, and prepare the Pull Request, so the two tools provide different layers of protection.
 
 ---
 
@@ -275,17 +284,20 @@ Publish a LinkedIn post summarizing what you built and what you learned about co
 
 #### LinkedIn Post URL
 
-Add your LinkedIn post URL here...
+https://lnkd.in/p/drv9KJgC
 
 ---
 
 ## Key Learnings
 
+What I learned this week:
 Add 3-5 bullet points on what you learned this week.
 
--
--
--
+- Fixed-rule checks provide consistent protection against known risks.
+- AI can review changes more broadly and help identify potential issues that rules may not cover.
+- AI-generated suggestions still need to be reviewed by a human for accuracy.
+- Critical Git actions such as git commit, git push, and opening a Pull Request should remain under human control.
+- Combining automation with human judgment can make development workflows safer without removing accountability.
 
 ---
 
@@ -303,9 +315,7 @@ Add 3-5 bullet points on what you learned this week.
 
 ## GitHub Repository URL
 
-Paste your forked repository URL here:
-
-`Add your URL here`
+https://github.com/abihail22558/devops-micro-internship-pravinmishra
 
 ---
 
