@@ -111,9 +111,7 @@ Add your screenshot here.
 
 ## GitHub Repository URL
 
-https://github.com/abihail22558/devops-micro-internship-pravinmishra.git
-
----
+https://github.com/abihail22558/devops-micro-internship-pravinmishra
 
 # Completion Checklist
 
