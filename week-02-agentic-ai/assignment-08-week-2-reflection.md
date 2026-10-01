@@ -54,8 +54,6 @@ You can publish your blog on:
 
 Blog Link: https://abihail.hashnode.dev/reflection-week-2
 
-`Add your URL here`
-
 ---
 
 # Task 2 — Create LinkedIn Post
