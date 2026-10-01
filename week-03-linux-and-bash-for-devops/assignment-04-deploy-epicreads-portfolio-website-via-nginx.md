@@ -120,8 +120,6 @@ Verify the deployed website and Nginx service are healthy.
 
 https://www.linkedin.com/posts/abihail-osahon-096564232_devops-linux-nginx-share-7486744675123535872-yalf/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADoaXXIBPrMQ_TL1SPeACNDTKQQWRcfVxDU
 
-`Add your URL here`
-
 ---
 
 #### Screenshot — Published LinkedIn post showing the live website with your Full Name in the footer
