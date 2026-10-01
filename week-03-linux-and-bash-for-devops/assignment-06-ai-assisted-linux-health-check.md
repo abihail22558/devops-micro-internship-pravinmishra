@@ -489,8 +489,6 @@ The incident response followed the four phases of the Agentic Loop. During the G
 
 https://www.linkedin.com/posts/abihail-osahon-096564232_devops-linux-bash-ugcPost-7487145347551686656-HS4Y/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADoaXXIBPrMQ_TL1SPeACNDTKQQWRcfVxDU
 
-`Add your URL here`
-
 ---
 
 #### Screenshot — Published LinkedIn post
@@ -502,9 +500,7 @@ https://www.linkedin.com/posts/abihail-osahon-096564232_devops-linux-bash-ugcPos
 
 # GitHub Repository URL
 
-https://github.com/abihail22558/devops-micro-internship-pravinmishra/tree/main/week-03-linux-and-bash-for-devops
-
-`Add your URL here`
+https://github.com/abihail22558/devops-micro-internship-pravinmishra
 
 ---
 
