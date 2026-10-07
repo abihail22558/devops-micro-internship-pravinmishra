@@ -135,7 +135,7 @@ Week 03 → Linux & Bash for DevOps -->
 | 02 | Agentic AI with Claude Code | ✅ Completed | ✅ Solved| https://www.linkedin.com/posts/abihail-osahon-096564232_devops-agenticai-claudecode-ugcPost-7486148866518687744-xuhu/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADoaXXIBPrMQ_TL1SPeACNDTKQQWRcfVxDU | https://abihail.hashnode.dev/reflection-week-2 |
 | 03 | Linux & Bash for DevOps | ✅ Completed |✅ Solved  | https://www.linkedin.com/posts/abihail-osahon-096564232_devops-linux-bash-share-7487207516091793408-Estp/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADoaXXIBPrMQ_TL1SPeACNDTKQQWRcfVxDU | https://hashnode.com/edit/cms24kdwv00000ahp59qy2lzk |
 | 04 | Git & GitHub | ✅ Completed | ✅ Solved | https://www.linkedin.com/feed/update/urn:li:activity:7511401722641100800/ | https://www.linkedin.com/feed/update/urn:li:activity:7511401722641100800/ |
-| 05 | DevOps Lifecycle & Agile | ⬜ Not Started | ⏳ Pending | — | — |
+| 05 | DevOps Lifecycle & Agile |  ✅ Completed| ✅ Solved| https://www.linkedin.com/feed/update/urn:li:activity:7513396627102171136/ | https://www.linkedin.com/feed/update/urn:li:activity:7513396627102171136/ |
 | 06 | AWS Cloud | ⬜ Not Started | ⏳ Pending | — | — |
 | 07 | Azure Cloud | ⬜ Not Started | ⏳ Pending | — | — |
 | 08 | Terraform | ⬜ Not Started | ⏳ Pending | — | — |
