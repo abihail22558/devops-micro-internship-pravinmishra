@@ -20,13 +20,13 @@ Create the footer Story (`Add footer with version and deploy date`, 1 point, `fr
 
 #### Screenshot 1 — Sprint 1 created with the Story inside it
 
-Add your screenshot here.
+![sprint with story](./screenshots/ass3task1m1.png)
 
 ---
 
 #### Screenshot 2 — Active Sprint board showing the Sprint Goal
 
-Add your screenshot here.
+![sprint with goal showing](./screenshots/ass3task1m2.png)
 
 ---
 
@@ -40,25 +40,25 @@ Add the required footer text (`Pravin Mishra Portfolio v1.0 — Deployed on <DD 
 
 #### Screenshot 3 — Jira board showing the Day 1 Sub-task in Done
 
-Add your screenshot here.
+![Day 1 sub done](./screenshots/ass3task2m1.png)
 
 ---
 
 #### Screenshot 4 — Successful Git commit output
 
-Add your screenshot here.
+![successful commit](./screenshots/ass3task2m2.png)
 
 ---
 
 #### Screenshot 5 — EC2 browser view showing the complete footer text, with the URL visible
 
-Add your screenshot here.
+![EC2 browsers view](./screenshots/ass3task2m3.png)
 
 ---
 
 #### Screenshot 6 — Jira Story comment showing the Day 1 Daily Scrum update
 
-Add your screenshot here.
+![story comment](./screenshots/ass3task2m4.png)
 
 ---
 
@@ -72,25 +72,25 @@ Update the footer so the deployment date is generated automatically (or updated 
 
 #### Screenshot 7 — Code editor showing the footer and date logic or deployment-time template snippet
 
-Add your screenshot here.
+![editor showin footer update](./screenshots/ass3task3m1.png)
 
 ---
 
 #### Screenshot 8 — EC2 browser view showing the updated footer with the current date
 
-Add your screenshot here.
+![EC2 browser view](./screenshots/ass3task3m2.png)
 
 ---
 
 #### Screenshot 9 — README snippet documenting the footer and date behavior
 
-Add your screenshot here.
+![snippet documenting footer behaviour](./screenshots/ass3task3m3.png)
 
 ---
 
 #### Screenshot 10 — Jira Story comment showing the Day 2 Daily Scrum update
 
-Add your screenshot here.
+![jira story comment](./screenshots/ass3task3m4.png)
 
 ---
 
@@ -104,19 +104,19 @@ Improve the footer's spacing, contrast, and readability, then validate it at bot
 
 #### Screenshot 11 — Desktop EC2 view showing the polished footer
 
-Add your screenshot here.
+![EC2 view](./screenshots/ass3task4m1.png)
 
 ---
 
 #### Screenshot 12 — Mobile responsive view showing the footer remains readable
 
-Add your screenshot here.
+![mobile view](./screenshots/ass3task4m2.png)
 
 ---
 
 #### Screenshot 13 — Jira Story comment showing the Day 3 Daily Scrum update
 
-Add your screenshot here.
+![jira story comment for day 3](./screenshots/ass3task4m3.png)
 
 ---
 
@@ -130,7 +130,8 @@ Replace the existing homepage tagline with the required DMI Website call-to-acti
 
 #### Screenshot 14 — EC2 browser view showing "Start your DevOps Journey here" and the clickable "Visit the DMI Website" link
 
-Add your screenshot here.
+![EC2 with website link obvious](./screenshots/ass3task5m1.png)
+![Jira scrum comment](./screenshots/ass3task5m1b.png)
 
 ---
 
@@ -144,19 +145,21 @@ Record a two-to-three-minute demo video of the shipped footer, add a retrospecti
 
 #### Screenshot 15 — Burndown Chart for Sprint 1
 
-Add your screenshot here.
+![burndown chat](./screenshots/ass3task6m1a.png)
+![burndown chats](./screenshots/ass3task6m1b.png)
+![jira scrum comment day5](./screenshots/ass3day5comment.png)
 
 ---
 
 #### Screenshot 16 — Jira retrospective comment
 
-Add your screenshot here.
+![retrospective comment](./screenshots/ass3task6m2.png)
 
 ---
 
 #### Screenshot 17 — Final EC2 browser view showing the complete footer requirement
 
-Add your screenshot here.
+![EC2 view](./screenshots/ass3task6m3.png)
 
 ---
 
@@ -164,7 +167,7 @@ Add your screenshot here.
 
 Paste your unlisted YouTube or accessible Google Drive demo-video link here:
 
-`Add your URL here`
+https://youtu.be/PsdxGUOHiu0
 
 ---
 
@@ -178,15 +181,21 @@ Publish a LinkedIn post about your five-day mini-Sprint, including your GitHub r
 
 #### LinkedIn Post URL
 
-Paste your LinkedIn post URL here:
+https://lnkd.in/p/dZnU4j2K
 
-`Add your URL here`
+#### EC2 Live URL
+
+http://18.225.168.126
+
+#### Github repository URL
+
+https://github.com/abihail22558/Pravin-Mishra-Portfolio-Template
 
 ---
 
 #### LinkedIn Screenshot 1 — Published LinkedIn post showing the post content and at least one required link or proof image
 
-Add your screenshot here.
+![linkedin screenshot](./screenshots/Linkedin.png)
 
 ---
 

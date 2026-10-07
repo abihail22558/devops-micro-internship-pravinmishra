@@ -20,7 +20,7 @@ Choose Team Mode or Solo Mode, and document how each Scrum role (Product Owner, 
 
 #### Screenshot 1 — Jira "Create project" screen, or the project sidebar after creation
 
-Add your screenshot here.
+![project creation after page](./screenshots/ass4task1m1.png)
 
 ---
 
@@ -28,7 +28,21 @@ Add your screenshot here.
 
 Write one line for each role: PO (what you prioritized), SM (how you ensured process), Dev Lead (what you built), DevOps Lead (how you shipped).
 
-Write your answer here.
+### Notes
+
+**Mode:** Solo Mode. I performed every step and played all four roles.
+
+- **PO:** Prioritized the backlog by user value, ranking the hero tagline and primary CTA first because they are the most visible trust and discoverability improvements.
+
+- **SM:** Kept the process on track by time-boxing the work, setting a Sprint Goal, and tracking progress on the Jira board and the burndown chart.
+
+- **Dev Lead:** Built one small UI-only change in the Gotto Job source code: a clearer hero headline, with a mobile font-size fix. No backend changes.
+
+- **DevOps Lead:** Committed the change in Git, deployed it to Nginx on AWS EC2, and verified it in the browser on desktop and phone views.
+
+**Project links**
+- Live project: http://18.225.168.126/gotto/
+- Source code: https://www.tooplate.com/download/2134_gotto_job
 
 ---
 
@@ -42,7 +56,7 @@ Create a Team-managed Scrum project named `Gotto Job – Team <#>` (Team Mode) o
 
 #### Screenshot 2 — Project created page showing the project name and key
 
-Add your screenshot here.
+![project name and key](./screenshots/ass4task2m1.png)
 
 ---
 
@@ -56,7 +70,7 @@ Create the Epic `Improve Gotto Job UI discoverability & trust` to group the UI i
 
 #### Screenshot 3 — Backlog showing the Epic panel with the Epic visible
 
-Add your screenshot here.
+![backlog with epic panel](./screenshots/ass4task3m1.png)
 
 ---
 
@@ -70,13 +84,13 @@ Create at least six Stories under the Epic, estimate each with 1, 2, or 3 story 
 
 #### Screenshot 4 — Backlog showing the Epic and at least six Stories under it
 
-Add your screenshot here.
+![epic backlog with stories](./screenshots/ass4task4m1.png)
 
 ---
 
 #### Screenshot 5 — One Story opened showing its Story Points and acceptance criteria filled in
 
-Add your screenshot here.
+![story opened](./screenshots/ass4task4m2.png)
 
 ---
 
@@ -90,7 +104,7 @@ Confirm the Story Points (1, 2, or 3) for each Story and record brief reasoning 
 
 #### Screenshot 6 — Backlog showing Story Points visible, or two or three Stories opened showing their points
 
-Add your screenshot here.
+![story points](./screenshots/ass4task5m1.png)
 
 ---
 
@@ -98,7 +112,19 @@ Add your screenshot here.
 
 For each story, explain in one or two lines why it is a 1, 2, or 3 (mention any debate, even in Solo Mode).
 
-Write your answer here.
+### Notes
+
+- **Hero tagline clarity (1 pt):** One line of text in one place, so very little effort and risk. The only extra check is a clean wrap on mobile. No debate.
+
+- **Primary CTA color (1 pt):** A single colour change plus a hover state. Low risk, and I only need to check the text stays readable.
+
+- **Job detail Apply Now CTA (1 pt):** One button with a mailto: or # link. I briefly considered 2 points for keyboard focus, but it's still a small job, so I settled on 1.
+
+- **Remote badge (2 pts):** Needs a new pill element and styling, repeated on every card flagged REMOTE. A bit more work than a text change.
+
+- **Job card typography (2 pts):** Title size and weight change across all job cards, and I have to check the layout doesn't break.
+
+- **Advanced search labels (2 pts):** Several form fields need clearer labels and alignment, plus a visual check on spacing.
 
 ---
 
@@ -112,13 +138,13 @@ Create Sprint 1, move three or four Stories into it (approximately 3–6 points)
 
 #### Screenshot 7 — Sprint 1 with the selected Stories inside it
 
-Add your screenshot here.
+![splint with selected stories](./screenshots/ass4task6m1.png)
 
 ---
 
 #### Screenshot 8 — One Story showing the Sub-tasks created
 
-Add your screenshot here.
+![story one with sub tasks](./screenshots/ass4task6m2.png)
 
 ---
 
@@ -132,7 +158,7 @@ Open the Burndown Chart and confirm it exists for Sprint 1. It is acceptable if 
 
 #### Screenshot 9 — Burndown Chart page opened, even if empty
 
-Add your screenshot here.
+![burndown chat](./screenshots/ass4task7m1.png)
 
 ---
 
@@ -146,19 +172,19 @@ Implement one small UI-only Story from Sprint 1, commit it, deploy it live, and 
 
 #### Screenshot 10 — Jira board showing the Story moved to Done
 
-Add your screenshot here.
+![Jira board showing story and subtasks done](./screenshots/ass4task8m1.png)
 
 ---
 
 #### Screenshot 11 — Git commit output
 
-Add your screenshot here.
+![git commit](./screenshots/ass4task8m2.png)
 
 ---
 
 #### Screenshot 12 — Live URL in the browser showing the UI change, with the URL visible
 
-Add your screenshot here.
+![Live URL in browser](./screenshots/ass4task8m3.png)
 
 ---
 
@@ -172,7 +198,7 @@ Add a retro comment covering what went well, what to improve, one Scrum pillar o
 
 #### Screenshot 13 — Jira retro comment visible
 
-Add your screenshot here.
+![Retro comment](./screenshots/ass4task9m1.png)
 
 ---
 
@@ -186,15 +212,13 @@ Publish a LinkedIn post about what you delivered, including your live URL, three
 
 #### LinkedIn Post URL
 
-Paste your LinkedIn post URL here:
-
-`Add your URL here`
+https://lnkd.in/p/dbtyEjuB
 
 ---
 
 #### Screenshot 14 — Published LinkedIn post
 
-Add your screenshot here.
+![linked in](./screenshots/ass4linkedin.png)
 
 ---
 
